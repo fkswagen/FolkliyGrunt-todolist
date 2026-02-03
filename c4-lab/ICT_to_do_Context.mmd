@@ -1,0 +1,33 @@
+C4Context
+title System Context diagram for ICT To Do List
+Person(student, "Student", "Manages personal tasks and tracks course work by syncing assignments from MyCourses")
+Person(instructor, "Instructor", "Views teaching-related tasks and monitors assignment deadlines for taught courses")
+Person(admin, "System Administrator", "Manages system configuration, user accounts, and monitors sync health")
+System(ict_todo, "ICT To Do List", "Task management system supporting web and mobile apps for tracking personal and course tasks")
+System_Ext(mycourses, "MyCourses", "External ICT e-learning system that owns course, assignment, and submission data")
+
+
+Rel(student, ict_todo, "Uses web/mobile app to manage tasks")
+Rel(instructor, ict_todo, "Uses to view tasks and monitor deadlines")
+Rel(admin, ict_todo, "Uses admin interface to manage system")
+Rel(ict_todo, mycourses, "Retrieves courses, assignments, and submission status", "HTTPS/JSON")
+UpdateLayoutConfig($c4ShapeInRow="2")
+
+
+title ICT To Do List - Container Diagram
+
+System_Boundary(s1, "ICT To Do List") {
+  Container(web_app, "Web App", "React (Single Page Application)", "Browser-based SPA for students, instructors, and admins.")
+  Container(mobile_app, "Mobile App", "Flutter", "Cross-platform mobile app for iOS and Android.")
+  Container(web_api, "Web API", "Python, FastAPI", "REST API (JSON over HTTPS); handles auth, task CRUD, sync orchestration.")
+  Container(db, "Database", "PostgreSQL", "Stores user profiles, tasks, sync settings and sync history.")
+  Container(connector, "MyCourses Connector", "Integration module/service", "Calls MyCourses web services, parses JSON and maps assignments/submissions to internal tasks.")
+}
+
+System_Ext(mycourses, "MyCourses", "ICT e-learning system - provides courses, assignments, and submission status (external)")
+
+Rel(web_app, web_api, "HTTPS / JSON (REST) - task CRUD, sync requests, authentication")
+Rel(mobile_app, web_api, "HTTPS / JSON (REST) - task CRUD, sync requests, authentication")
+Rel(web_api, db, "Reads and writes data (SQL via ORM e.g. SQLAlchemy) - store tasks, users, sync history")
+Rel(web_api, connector, "Internal interface (direct function call or internal HTTP) - trigger MyCourses sync & mapping")
+Rel(connector, mycourses, "HTTPS / JSON - retrieve courses, assignments, and submission status")
