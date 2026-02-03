@@ -1,0 +1,348 @@
+{
+  "domains": {
+    "GtHNjpLiFT3skfkfvddA": {
+      "id": "GtHNjpLiFT3skfkfvddA",
+      "name": "Default domain"
+    }
+  },
+  "flows": {},
+  "modelConnections": {
+    "3KaLWOvNAD1ZZ6y8rMEQ": {
+      "description": "",
+      "direction": "outgoing",
+      "id": "3KaLWOvNAD1ZZ6y8rMEQ",
+      "name": "Retrieves courses, assignments, submission status (HTTPS/JSON)",
+      "originId": "5DNF9AzSrSNCv0WeBmDb",
+      "status": "live",
+      "tagIds": [],
+      "targetId": "wPf0Mo0y65PxchyCkHeU",
+      "technologyIds": [],
+      "viaId": null
+    },
+    "9iNoppEv1sC8eBe8CoQX": {
+      "description": "",
+      "direction": "outgoing",
+      "id": "9iNoppEv1sC8eBe8CoQX",
+      "name": "Internal interface (direct function call or internal HTTP) – trigger MyCourses sync & mapping",
+      "originId": "tyBdgptCOa37xGOijKb5",
+      "status": "live",
+      "tagIds": [],
+      "targetId": "e8yGjC3eN27vs7M4M5b5",
+      "technologyIds": [],
+      "viaId": null
+    },
+    "Ewpmw4Uy1qiL94StwTSG": {
+      "description": "",
+      "direction": "outgoing",
+      "id": "Ewpmw4Uy1qiL94StwTSG",
+      "name": "HTTPS / JSON (REST) – task CRUD, sync requests, authentication",
+      "originId": "OfZ1yuXNDJGlvIvT20vM",
+      "status": "live",
+      "tagIds": [],
+      "targetId": "tyBdgptCOa37xGOijKb5",
+      "technologyIds": [],
+      "viaId": null
+    },
+    "ILheV8ZmZGFd4beBjkTs": {
+      "description": "",
+      "direction": "outgoing",
+      "id": "ILheV8ZmZGFd4beBjkTs",
+      "name": "Manages system and sync health",
+      "originId": "aKwht5PCV7GkMywMhyHN",
+      "status": "live",
+      "tagIds": [],
+      "targetId": "5DNF9AzSrSNCv0WeBmDb",
+      "technologyIds": [],
+      "viaId": null
+    },
+    "dA9du9iBU5sR7EfZ4L07": {
+      "description": "",
+      "direction": "outgoing",
+      "id": "dA9du9iBU5sR7EfZ4L07",
+      "name": "Uses web/mobile app to manage tasks",
+      "originId": "YEj8eeKJKjVi9fpY2307",
+      "status": "live",
+      "tagIds": [],
+      "targetId": "5DNF9AzSrSNCv0WeBmDb",
+      "technologyIds": [],
+      "viaId": null
+    },
+    "enemoPC3XGwqU8IfG34Y": {
+      "description": "",
+      "direction": "outgoing",
+      "id": "enemoPC3XGwqU8IfG34Y",
+      "name": "Views teaching-related tasks",
+      "originId": "7rslVXKg1ZqmaZaJtc5P",
+      "status": "live",
+      "tagIds": [],
+      "targetId": "5DNF9AzSrSNCv0WeBmDb",
+      "technologyIds": [],
+      "viaId": null
+    },
+    "kOUwt6i7MVpD6UJf7MTs": {
+      "description": "",
+      "direction": "outgoing",
+      "id": "kOUwt6i7MVpD6UJf7MTs",
+      "name": "HTTPS / JSON (REST) – task CRUD, sync requests, authentication",
+      "originId": "s8zwFS9nTITVvBfCdIQc",
+      "status": "live",
+      "tagIds": [],
+      "targetId": "tyBdgptCOa37xGOijKb5",
+      "technologyIds": [],
+      "viaId": null
+    },
+    "n8Nb6HQqUdSsSJU89ybU": {
+      "description": "",
+      "direction": "outgoing",
+      "id": "n8Nb6HQqUdSsSJU89ybU",
+      "name": "Reads and writes data (SQL via ORM e.g. SQLAlchemy) – store tasks, users, sync history",
+      "originId": "tyBdgptCOa37xGOijKb5",
+      "status": "live",
+      "tagIds": [],
+      "targetId": "fipqaM271CJKBD4dRq7Y",
+      "technologyIds": [],
+      "viaId": null
+    },
+    "p7E74o7tNy5OxQRpss1z": {
+      "description": "",
+      "direction": "outgoing",
+      "id": "p7E74o7tNy5OxQRpss1z",
+      "name": "Sends dHTTPS / JSON – retrieve courses, assignments, and submission status\nata to",
+      "originId": "e8yGjC3eN27vs7M4M5b5",
+      "status": "live",
+      "tagIds": [],
+      "targetId": "wPf0Mo0y65PxchyCkHeU",
+      "technologyIds": [],
+      "viaId": null
+    }
+  },
+  "modelObjects": {
+    "5DNF9AzSrSNCv0WeBmDb": {
+      "caption": "Task management system for ICT e-learning",
+      "description": "",
+      "domainId": "GtHNjpLiFT3skfkfvddA",
+      "external": false,
+      "groupIds": [],
+      "icon": null,
+      "id": "5DNF9AzSrSNCv0WeBmDb",
+      "links": {},
+      "name": "ICT To Do List",
+      "parentId": "wspMXQ0JIy344jpAlsRA",
+      "parentIds": [
+        "wspMXQ0JIy344jpAlsRA"
+      ],
+      "status": "live",
+      "tagIds": [],
+      "teamIds": [],
+      "technologyIds": [],
+      "type": "system"
+    },
+    "7rslVXKg1ZqmaZaJtc5P": {
+      "caption": "Manages personal tasks and coursework",
+      "description": "",
+      "domainId": "GtHNjpLiFT3skfkfvddA",
+      "external": false,
+      "groupIds": [],
+      "icon": null,
+      "id": "7rslVXKg1ZqmaZaJtc5P",
+      "links": {},
+      "name": "Student",
+      "parentId": "wspMXQ0JIy344jpAlsRA",
+      "parentIds": [
+        "wspMXQ0JIy344jpAlsRA"
+      ],
+      "status": "live",
+      "tagIds": [],
+      "teamIds": [],
+      "technologyIds": [],
+      "type": "actor"
+    },
+    "OfZ1yuXNDJGlvIvT20vM": {
+      "caption": "",
+      "description": "",
+      "domainId": "GtHNjpLiFT3skfkfvddA",
+      "external": false,
+      "groupIds": [],
+      "icon": null,
+      "id": "OfZ1yuXNDJGlvIvT20vM",
+      "links": {},
+      "name": "Mobile App",
+      "parentId": "5DNF9AzSrSNCv0WeBmDb",
+      "parentIds": [
+        "5DNF9AzSrSNCv0WeBmDb",
+        "wspMXQ0JIy344jpAlsRA"
+      ],
+      "status": "live",
+      "tagIds": [],
+      "teamIds": [],
+      "technologyIds": [],
+      "type": "app"
+    },
+    "YEj8eeKJKjVi9fpY2307": {
+      "caption": "Manages system configuration and sync health",
+      "description": "",
+      "domainId": "GtHNjpLiFT3skfkfvddA",
+      "external": false,
+      "groupIds": [],
+      "icon": null,
+      "id": "YEj8eeKJKjVi9fpY2307",
+      "links": {},
+      "name": "Administrator",
+      "parentId": "wspMXQ0JIy344jpAlsRA",
+      "parentIds": [
+        "wspMXQ0JIy344jpAlsRA"
+      ],
+      "status": "live",
+      "tagIds": [],
+      "teamIds": [],
+      "technologyIds": [],
+      "type": "actor"
+    },
+    "aKwht5PCV7GkMywMhyHN": {
+      "caption": "Views teaching-related tasks and deadlines",
+      "description": "",
+      "domainId": "GtHNjpLiFT3skfkfvddA",
+      "external": false,
+      "groupIds": [],
+      "icon": null,
+      "id": "aKwht5PCV7GkMywMhyHN",
+      "links": {},
+      "name": "Instructor",
+      "parentId": "wspMXQ0JIy344jpAlsRA",
+      "parentIds": [
+        "wspMXQ0JIy344jpAlsRA"
+      ],
+      "status": "live",
+      "tagIds": [],
+      "teamIds": [],
+      "technologyIds": [],
+      "type": "actor"
+    },
+    "e8yGjC3eN27vs7M4M5b5": {
+      "caption": "",
+      "description": "",
+      "domainId": "GtHNjpLiFT3skfkfvddA",
+      "external": false,
+      "groupIds": [],
+      "icon": null,
+      "id": "e8yGjC3eN27vs7M4M5b5",
+      "links": {},
+      "name": "MyCourses Connector",
+      "parentId": "5DNF9AzSrSNCv0WeBmDb",
+      "parentIds": [
+        "5DNF9AzSrSNCv0WeBmDb",
+        "wspMXQ0JIy344jpAlsRA"
+      ],
+      "status": "live",
+      "tagIds": [],
+      "teamIds": [],
+      "technologyIds": [],
+      "type": "app"
+    },
+    "fipqaM271CJKBD4dRq7Y": {
+      "caption": "",
+      "description": "",
+      "domainId": "GtHNjpLiFT3skfkfvddA",
+      "external": false,
+      "groupIds": [],
+      "icon": null,
+      "id": "fipqaM271CJKBD4dRq7Y",
+      "links": {},
+      "name": "Database",
+      "parentId": "5DNF9AzSrSNCv0WeBmDb",
+      "parentIds": [
+        "5DNF9AzSrSNCv0WeBmDb",
+        "wspMXQ0JIy344jpAlsRA"
+      ],
+      "status": "live",
+      "tagIds": [],
+      "teamIds": [],
+      "technologyIds": [],
+      "type": "store"
+    },
+    "s8zwFS9nTITVvBfCdIQc": {
+      "caption": "",
+      "description": "",
+      "domainId": "GtHNjpLiFT3skfkfvddA",
+      "external": false,
+      "groupIds": [],
+      "icon": null,
+      "id": "s8zwFS9nTITVvBfCdIQc",
+      "links": {},
+      "name": "Web App",
+      "parentId": "5DNF9AzSrSNCv0WeBmDb",
+      "parentIds": [
+        "5DNF9AzSrSNCv0WeBmDb",
+        "wspMXQ0JIy344jpAlsRA"
+      ],
+      "status": "live",
+      "tagIds": [],
+      "teamIds": [],
+      "technologyIds": [],
+      "type": "app"
+    },
+    "tyBdgptCOa37xGOijKb5": {
+      "caption": "",
+      "description": "",
+      "domainId": "GtHNjpLiFT3skfkfvddA",
+      "external": false,
+      "groupIds": [],
+      "icon": null,
+      "id": "tyBdgptCOa37xGOijKb5",
+      "links": {},
+      "name": "Web API",
+      "parentId": "5DNF9AzSrSNCv0WeBmDb",
+      "parentIds": [
+        "5DNF9AzSrSNCv0WeBmDb",
+        "wspMXQ0JIy344jpAlsRA"
+      ],
+      "status": "live",
+      "tagIds": [],
+      "teamIds": [],
+      "technologyIds": [],
+      "type": "app"
+    },
+    "wPf0Mo0y65PxchyCkHeU": {
+      "caption": "",
+      "description": "",
+      "domainId": "GtHNjpLiFT3skfkfvddA",
+      "external": true,
+      "groupIds": [],
+      "icon": null,
+      "id": "wPf0Mo0y65PxchyCkHeU",
+      "links": {},
+      "name": "MyCourses",
+      "parentId": "wspMXQ0JIy344jpAlsRA",
+      "parentIds": [
+        "wspMXQ0JIy344jpAlsRA"
+      ],
+      "status": "live",
+      "tagIds": [],
+      "teamIds": [],
+      "technologyIds": [],
+      "type": "system"
+    },
+    "wspMXQ0JIy344jpAlsRA": {
+      "caption": "",
+      "description": "",
+      "domainId": "GtHNjpLiFT3skfkfvddA",
+      "external": false,
+      "groupIds": [],
+      "icon": null,
+      "id": "wspMXQ0JIy344jpAlsRA",
+      "links": {},
+      "name": "",
+      "parentId": null,
+      "parentIds": [],
+      "status": "live",
+      "tagIds": [],
+      "teamIds": [],
+      "technologyIds": [],
+      "type": "root"
+    }
+  },
+  "tagGroups": {},
+  "tags": {},
+  "teams": {},
+  "technologies": {}
+}
